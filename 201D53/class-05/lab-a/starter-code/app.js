@@ -84,11 +84,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
-
 function sumArray(sumArr) { //eslint-disable-line
-    var sum = testArray[0] + testArray[1] + testArray[2];
+    var sumTwo = sum(testArray[0],testArray[1]);
+    sumTwo = parseInt(sumTwo);
+    console.log(sumTwo);
+
+    var sumThree = sum(sumTwo,testArray[2]);
+    sumThree = parseInt(sumThree);
+    console.log(sumThree)
+    
     var string = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
-    return [sum,string];
+    return [sumThree,string];
 }
 
 
