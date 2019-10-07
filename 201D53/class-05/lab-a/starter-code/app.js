@@ -85,18 +85,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
-    var sumTwo = sum(testArray[0],testArray[1]);
+    var sumTwo = sum(testArray[0],testArray[1])[0];
     sumTwo = parseInt(sumTwo);
-    console.log(sumTwo);
 
-    var sumThree = sum(sumTwo,testArray[2]);
+    var sumThree = sum(sumTwo,testArray[2])[0];
     sumThree = parseInt(sumThree);
-    console.log(sumThree)
     
-    var string = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
+    var string = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumThree + ' is their sum.';
+
     return [sumThree,string];
 }
-
 
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -153,7 +151,6 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     var multiplier = dynamicArray[0];
     for (let i = 0 ; i < dynamicArray.length -1 ; i++){
         multiplier = multiply(multiplier,dynamicArray[i+1])[0];
-        
         
     }
     var string = dynamicArray.toString();
